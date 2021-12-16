@@ -67,6 +67,13 @@ class ViewController: UIViewController {
         textView.text = FimData[fimItemCount - 1].seven
     }
 
+    @IBAction private func change(sender: UIButton) {
+        var buttons:[UIButton] = [button1,button2,button3,button4,button5,button6,button7]
+        buttons.forEach{ (button: UIButton) in
+            button.isSelected = (button === sender)
+        }
+    }
+
     @IBAction func decide(_ sender: Any) {
         fimItemCount += 1
         viewWillAppear(true)
