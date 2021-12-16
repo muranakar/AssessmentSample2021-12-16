@@ -13,6 +13,7 @@
 		B2372949276B6D3A00D4C53F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2372947276B6D3A00D4C53F /* Main.storyboard */; };
 		B237294B276B6D3B00D4C53F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B237294A276B6D3B00D4C53F /* Assets.xcassets */; };
 		B237294E276B6D3B00D4C53F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B237294C276B6D3B00D4C53F /* LaunchScreen.storyboard */; };
+		B2372956276B6D6F00D4C53F /* FIM.json in Resources */ = {isa = PBXBuildFile; fileRef = B2372955276B6D6F00D4C53F /* FIM.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B237294A276B6D3B00D4C53F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B237294D276B6D3B00D4C53F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B237294F276B6D3B00D4C53F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2372955276B6D6F00D4C53F /* FIM.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FIM.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				B2372943276B6D3A00D4C53F /* SceneDelegate.swift */,
 				B2372945276B6D3A00D4C53F /* ViewController.swift */,
 				B2372947276B6D3A00D4C53F /* Main.storyboard */,
+				B2372955276B6D6F00D4C53F /* FIM.json */,
 				B237294A276B6D3B00D4C53F /* Assets.xcassets */,
 				B237294C276B6D3B00D4C53F /* LaunchScreen.storyboard */,
 				B237294F276B6D3B00D4C53F /* Info.plist */,
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2372956276B6D6F00D4C53F /* FIM.json in Resources */,
 				B237294E276B6D3B00D4C53F /* LaunchScreen.storyboard in Resources */,
 				B237294B276B6D3B00D4C53F /* Assets.xcassets in Resources */,
 				B2372949276B6D3A00D4C53F /* Main.storyboard in Resources */,
