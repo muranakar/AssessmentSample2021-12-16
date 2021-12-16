@@ -24,10 +24,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func button1(_ sender: Any) {
-
     }
 
     @IBAction func button2(_ sender: Any) {
+
+        
     }
 
     @IBAction func button3(_ sender: Any) {
