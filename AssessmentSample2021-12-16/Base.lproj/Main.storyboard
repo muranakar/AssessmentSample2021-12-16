@@ -29,8 +29,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="2"/>
                                 <connections>
-                                    <action selector="button2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WIY-Ja-hE0"/>
                                     <action selector="changeWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H2o-kV-ZuC"/>
+                                    <action selector="updateWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v76-N2-5LJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUr-hG-PT4">
@@ -39,8 +39,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="3"/>
                                 <connections>
-                                    <action selector="button3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dfa-Dc-e5p"/>
                                     <action selector="changeWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CJV-OF-dmQ"/>
+                                    <action selector="updateWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5AQ-al-MFE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qV-mE-OLN">
@@ -49,7 +49,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="4"/>
                                 <connections>
-                                    <action selector="button4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dyt-qg-zqY"/>
                                     <action selector="changeWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kx3-mW-Ua9"/>
                                 </connections>
                             </button>
@@ -59,7 +58,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="6"/>
                                 <connections>
-                                    <action selector="button6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0nj-mm-46u"/>
                                     <action selector="changeWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vvY-2d-gcQ"/>
                                 </connections>
                             </button>
@@ -69,7 +67,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="7"/>
                                 <connections>
-                                    <action selector="button7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rfZ-EL-Vj9"/>
                                     <action selector="changeWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6vw-1O-ydl"/>
                                 </connections>
                             </button>
@@ -88,8 +85,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="1"/>
                                 <connections>
-                                    <action selector="button1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3PI-Fa-eJU"/>
                                     <action selector="changeWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5oc-sC-kTB"/>
+                                    <action selector="updateWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QsN-Kc-PIv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1T-s4-mrL">
@@ -98,7 +95,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="5"/>
                                 <connections>
-                                    <action selector="button5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BLN-yq-rTj"/>
                                     <action selector="changeWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z1F-Af-r88"/>
                                 </connections>
                             </button>

@@ -32,40 +32,75 @@ class ViewController: UIViewController {
         textView.text = FimData[fimItemCount - 1].attention
     }
 
-    @IBAction func button1(_ sender: Any) {
-        fimItemResult = 1
-        textView.text = FimData[fimItemCount - 1].one
+    private lazy var buttons: [UIButton] = [
+        button1,button2,button3,button4,button5,button6,button7
+    ]
+
+    private lazy var texts: [String] = [
+        FimData[fimItemCount - 1].one,
+        FimData[fimItemCount - 1].two,
+        FimData[fimItemCount - 1].three,
+        FimData[fimItemCount - 1].four,
+        FimData[fimItemCount - 1].five,
+        FimData[fimItemCount - 1].six,
+        FimData[fimItemCount - 1].seven
+    ]
+
+    private var textsSample: [String] = {
+        let texts = [
+            FimData[fimItemCount - 1].one,
+            FimData[fimItemCount - 1].two,
+            FimData[fimItemCount - 1].three,
+            FimData[fimItemCount - 1].four,
+            FimData[fimItemCount - 1].five,
+            FimData[fimItemCount - 1].six,
+            FimData[fimItemCount - 1].seven
+        ]
+        return texts
+    }()
+
+    private lazy var dictionary = { [UIButton: String](uniqueKeysWithValues: zip(self.buttons, self.texts))
     }
 
-    @IBAction func button2(_ sender: Any) {
-        fimItemResult = 2
-        textView.text = FimData[fimItemCount - 1].two
+    @IBAction func update(sender: UIButton){
+        textView.text = dictionary()[sender]
     }
 
-    @IBAction func button3(_ sender: Any) {
-        fimItemResult = 3
-        textView.text = FimData[fimItemCount - 1].three
-    }
-
-    @IBAction func button4(_ sender: Any) {
-        fimItemResult = 4
-        textView.text = FimData[fimItemCount - 1].four
-    }
-
-    @IBAction func button5(_ sender: Any) {
-        fimItemResult = 5
-        textView.text = FimData[fimItemCount - 1].five
-    }
-
-    @IBAction func button6(_ sender: Any) {
-        fimItemResult = 6
-        textView.text = FimData[fimItemCount - 1].six
-    }
-
-    @IBAction func button7(_ sender: Any) {
-        fimItemResult = 7
-        textView.text = FimData[fimItemCount - 1].seven
-    }
+//
+//    @IBAction func button1(_ sender: Any) {
+//        fimItemResult = 1
+//        textView.text = FimData[fimItemCount - 1].one
+//    }
+//
+//    @IBAction func button2(_ sender: Any) {
+//        fimItemResult = 2
+//        textView.text = FimData[fimItemCount - 1].two
+//    }
+//
+//    @IBAction func button3(_ sender: Any) {
+//        fimItemResult = 3
+//        textView.text = FimData[fimItemCount - 1].three
+//    }
+//
+//    @IBAction func button4(_ sender: Any) {
+//        fimItemResult = 4
+//        textView.text = FimData[fimItemCount - 1].four
+//    }
+//
+//    @IBAction func button5(_ sender: Any) {
+//        fimItemResult = 5
+//        textView.text = FimData[fimItemCount - 1].five
+//    }
+//
+//    @IBAction func button6(_ sender: Any) {
+//        fimItemResult = 6
+//        textView.text = FimData[fimItemCount - 1].six
+//    }
+//
+//    @IBAction func button7(_ sender: Any) {
+//        fimItemResult = 7
+//        textView.text = FimData[fimItemCount - 1].seven
+//    }
 
     @IBAction private func change(sender: UIButton) {
         var buttons:[UIButton] = [button1,button2,button3,button4,button5,button6,button7]
@@ -77,6 +112,9 @@ class ViewController: UIViewController {
     @IBAction func decide(_ sender: Any) {
         fimItemCount += 1
         viewWillAppear(true)
+        buttons.forEach{ (button: UIButton) in
+            button.isSelected = false
+        }
     }
 
     //MARK: - JSONファイルのデコーダー
