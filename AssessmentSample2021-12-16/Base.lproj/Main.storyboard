@@ -82,6 +82,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="決定"/>
+                                <connections>
+                                    <action selector="decide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VTc-7v-llH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiR-qK-iml">
                                 <rect key="frame" x="96" y="550" width="50" height="50"/>
@@ -113,6 +116,8 @@
                         <outlet property="button5" destination="a1T-s4-mrL" id="Mhh-6q-Te7"/>
                         <outlet property="button6" destination="rJn-Vm-4DQ" id="BUe-d9-IND"/>
                         <outlet property="button7" destination="1DR-bi-1es" id="CrV-bV-YMJ"/>
+                        <outlet property="label" destination="NaF-NX-HzF" id="k1j-Rj-jfN"/>
+                        <outlet property="textView" destination="HQe-Sp-qkI" id="2De-Zt-LMU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
