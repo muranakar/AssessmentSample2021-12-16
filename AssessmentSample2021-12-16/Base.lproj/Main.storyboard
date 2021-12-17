@@ -50,6 +50,7 @@
                                 <buttonConfiguration key="configuration" style="gray" title="4"/>
                                 <connections>
                                     <action selector="changeWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kx3-mW-Ua9"/>
+                                    <action selector="updateWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i4D-Qm-6fE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJn-Vm-4DQ">
@@ -59,6 +60,7 @@
                                 <buttonConfiguration key="configuration" style="gray" title="6"/>
                                 <connections>
                                     <action selector="changeWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vvY-2d-gcQ"/>
+                                    <action selector="updateWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3CP-mc-we5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DR-bi-1es">
@@ -68,6 +70,7 @@
                                 <buttonConfiguration key="configuration" style="gray" title="7"/>
                                 <connections>
                                     <action selector="changeWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6vw-1O-ydl"/>
+                                    <action selector="updateWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UCm-ur-DfK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92R-62-UJm">
@@ -96,6 +99,7 @@
                                 <buttonConfiguration key="configuration" style="gray" title="5"/>
                                 <connections>
                                     <action selector="changeWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z1F-Af-r88"/>
+                                    <action selector="updateWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="goz-2v-HHe"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HQe-Sp-qkI">

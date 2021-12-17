@@ -21,94 +21,48 @@ class ViewController: UIViewController {
 
     var fimItemCount = 1
     var fimItemResult: Int?
+    var textsSample: [String] = []
+    var buttons: [UIButton] = []
+    var dictionary: [UIButton: String] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         decoderFimJsonFile()
     }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         label.text = FimData[fimItemCount - 1].fimItem
         textView.text = FimData[fimItemCount - 1].attention
-    }
-
-    private lazy var buttons: [UIButton] = [
-        button1,button2,button3,button4,button5,button6,button7
-    ]
-
-    private lazy var texts: [String] = [
-        FimData[fimItemCount - 1].one,
-        FimData[fimItemCount - 1].two,
-        FimData[fimItemCount - 1].three,
-        FimData[fimItemCount - 1].four,
-        FimData[fimItemCount - 1].five,
-        FimData[fimItemCount - 1].six,
-        FimData[fimItemCount - 1].seven
-    ]
-
-    private var textsSample: [String] = {
-        let texts = [
-            FimData[fimItemCount - 1].one,
-            FimData[fimItemCount - 1].two,
-            FimData[fimItemCount - 1].three,
-            FimData[fimItemCount - 1].four,
-            FimData[fimItemCount - 1].five,
-            FimData[fimItemCount - 1].six,
-            FimData[fimItemCount - 1].seven
+        textsSample = { () -> [String] in
+            let texts = [
+                FimData[fimItemCount - 1].one,
+                FimData[fimItemCount - 1].two,
+                FimData[fimItemCount - 1].three,
+                FimData[fimItemCount - 1].four,
+                FimData[fimItemCount - 1].five,
+                FimData[fimItemCount - 1].six,
+                FimData[fimItemCount - 1].seven
+            ]
+            return texts
+        }()
+        buttons = [
+            button1,button2,button3,button4,button5,button6,button7
         ]
-        return texts
-    }()
-
-    private lazy var dictionary = { [UIButton: String](uniqueKeysWithValues: zip(self.buttons, self.texts))
+        dictionary = {[UIButton: String](uniqueKeysWithValues: zip(buttons, textsSample)) }()
     }
 
+    //　ボタンと文字列を関連付けさせた配列を、ボタンが選択された際に、そのボタンと関連づけられた文字列を、テキストビューに反映させる。
     @IBAction func update(sender: UIButton){
-        textView.text = dictionary()[sender]
+        textView.text = dictionary[sender]
     }
-
-//
-//    @IBAction func button1(_ sender: Any) {
-//        fimItemResult = 1
-//        textView.text = FimData[fimItemCount - 1].one
-//    }
-//
-//    @IBAction func button2(_ sender: Any) {
-//        fimItemResult = 2
-//        textView.text = FimData[fimItemCount - 1].two
-//    }
-//
-//    @IBAction func button3(_ sender: Any) {
-//        fimItemResult = 3
-//        textView.text = FimData[fimItemCount - 1].three
-//    }
-//
-//    @IBAction func button4(_ sender: Any) {
-//        fimItemResult = 4
-//        textView.text = FimData[fimItemCount - 1].four
-//    }
-//
-//    @IBAction func button5(_ sender: Any) {
-//        fimItemResult = 5
-//        textView.text = FimData[fimItemCount - 1].five
-//    }
-//
-//    @IBAction func button6(_ sender: Any) {
-//        fimItemResult = 6
-//        textView.text = FimData[fimItemCount - 1].six
-//    }
-//
-//    @IBAction func button7(_ sender: Any) {
-//        fimItemResult = 7
-//        textView.text = FimData[fimItemCount - 1].seven
-//    }
-
+    //　一つのボタンが押された際、そのボタン以外は非選択状態にする
     @IBAction private func change(sender: UIButton) {
-        var buttons:[UIButton] = [button1,button2,button3,button4,button5,button6,button7]
         buttons.forEach{ (button: UIButton) in
             button.isSelected = (button === sender)
         }
     }
-
+    //　決定ボタンのアクション
     @IBAction func decide(_ sender: Any) {
         fimItemCount += 1
         viewWillAppear(true)
@@ -116,6 +70,44 @@ class ViewController: UIViewController {
             button.isSelected = false
         }
     }
+
+
+    //MARK: - IBAction　各ボタン
+    //
+    //    @IBAction func button1(_ sender: Any) {
+    //        fimItemResult = 1
+    //        textView.text = FimData[fimItemCount - 1].one
+    //    }
+    //
+    //    @IBAction func button2(_ sender: Any) {
+    //        fimItemResult = 2
+    //        textView.text = FimData[fimItemCount - 1].two
+    //    }
+    //
+    //    @IBAction func button3(_ sender: Any) {
+    //        fimItemResult = 3
+    //        textView.text = FimData[fimItemCount - 1].three
+    //    }
+    //
+    //    @IBAction func button4(_ sender: Any) {
+    //        fimItemResult = 4
+    //        textView.text = FimData[fimItemCount - 1].four
+    //    }
+    //
+    //    @IBAction func button5(_ sender: Any) {
+    //        fimItemResult = 5
+    //        textView.text = FimData[fimItemCount - 1].five
+    //    }
+    //
+    //    @IBAction func button6(_ sender: Any) {
+    //        fimItemResult = 6
+    //        textView.text = FimData[fimItemCount - 1].six
+    //    }
+    //
+    //    @IBAction func button7(_ sender: Any) {
+    //        fimItemResult = 7
+    //        textView.text = FimData[fimItemCount - 1].seven
+    //    }
 
     //MARK: - JSONファイルのデコーダー
     var FimData:[FimItem] = []
